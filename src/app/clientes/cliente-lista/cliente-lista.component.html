@@ -1,0 +1,7 @@
+<h1>Clientes</h1>
+<div *ngFor="let cliente of clientes" style="width: 300px;">
+    <app-cliente-detalhes [cliente]='cliente'></app-cliente-detalhes>
+</div>
+<div style="margin-top:20px;">
+    <button type="button" class="button btn-danger" (click)='deletarCliente()'>Deletar Todos</button>
+</div>

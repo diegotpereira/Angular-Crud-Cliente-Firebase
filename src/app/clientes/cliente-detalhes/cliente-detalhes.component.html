@@ -1,0 +1,19 @@
+<div *ngIf="cliente">
+    <div>
+        <label>Nome: </label>{{cliente.nome}}
+    </div>
+    <div>
+        <label>Idade: </label>{{cliente.idade}}
+    </div>
+    <div>
+        <label>Ativo: </label>{{cliente.ativo}}
+    </div>
+
+    <span class="button is-small btn-primary" *ngIf='cliente.ativo' (click)='atualizarAtivo(false)'>Inativo</span>
+
+    <span class="button is-small btn-primary" *ngIf='!cliente.ativo' (click)='atualizarAtivo(true)'>Ativo</span>
+
+    <span class="button is-small btn-danger" (click)='deletarCliente'>Deletar</span>
+
+    <hr />
+</div>
